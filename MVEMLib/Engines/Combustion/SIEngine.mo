@@ -105,7 +105,6 @@ class SIEngine
         rotation=90,
         origin={-22,84})));
   MVEMLib.Basic.Restrictions.SimpleHeatExchangePipe interCooler(
-      redeclare replaceable package Medium = fuelAirMedium.airMedium,
     redeclare replaceable package externalMedium = fuelAirMedium.airMedium,
     redeclare replaceable package flowMedium = fuelAirMedium.airMedium)
     annotation (Placement(transformation(extent={{-72,44},{-52,64}})));
