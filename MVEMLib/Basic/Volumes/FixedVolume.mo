@@ -29,7 +29,7 @@ class FixedVolume "Fixed Volume, i.e. that cannot change size "
 
   // Gas properties
   Medium.BaseProperties gas(T(start=TStart,fixed=true),p(start=pStart,fixed=true),
-    X(start=Medium.reference_X,fixed=true))
+    X(start=Medium.reference_X,each fixed=true))
     "Pressure, temperature, composition, and other gas properties of the open system";
   // States or variables
 protected

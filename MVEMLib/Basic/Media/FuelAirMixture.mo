@@ -31,13 +31,15 @@ package FuelAirMixture
   // Fuel Medium
   package fuelMedium
     "Ideal gas \"C8H18 Isooctane\" from NASA Glenn coefficients"
-    extends Modelica.Media.IdealGases.Common.SingleGasNasa(
+    extends Modelica.Media.IdealGases.Common.MixtureGasNasa(
       excludeEnthalpyOfFormation=false,
       mediumName="C8H18 Isooctane",
-      data=Modelica.Media.IdealGases.Common.SingleGasesData.C8H18_isooctane);//,
-    //         fluidConstants={Common.FluidData.C8H18_nooctane});
+      data={Modelica.Media.IdealGases.Common.SingleGasesData.C8H18_isooctane},
+      substanceNames={"Isooctane C8H18"},
+      fluidConstants = {Modelica.Media.IdealGases.Common.FluidData.C8H18_n_octane},
+      reference_X={1});
   end fuelMedium;
-
+  
   // Unburned Medium
   package unburnedMedium "Mixture of fuel and air"
     extends Modelica.Media.IdealGases.Common.MixtureGasNasa(

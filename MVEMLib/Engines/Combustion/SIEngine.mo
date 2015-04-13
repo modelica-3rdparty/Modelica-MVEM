@@ -65,7 +65,7 @@ class SIEngine
         rotation=270)));
   Modelica.Blocks.Sources.Constant const(k=fuelAirMedium.AFs) annotation (
       Placement(transformation(extent={{-60,80},{-38,100}}, rotation=0)));
-  Basic.Sensors.MassFlowSensor massFlow(redeclare package Medium =
+  Basic.Sensors.MassFlowSensor massFlow(redeclare replaceable package Medium =
         fuelAirMedium.airMedium) annotation (Placement(transformation(extent={{-20,44},
             {0,64}},           rotation=0)));
   Modelica.Blocks.Math.Division fuelDemand annotation (Placement(transformation(
@@ -86,16 +86,16 @@ class SIEngine
         extent={{-10,-10},{10,10}},
         rotation=180,
         origin={46,-70})));
-  MVEMLib.Engines.Combustion.Parts.SIEfficiency ottoEfficiency(redeclare
-      package externalMedium = fuelAirMedium.airMedium, redeclare package
+  MVEMLib.Engines.Combustion.Parts.SIEfficiency ottoEfficiency(redeclare replaceable
+      package externalMedium = fuelAirMedium.airMedium, redeclare replaceable package
       flowMedium = fuelAirMedium.burnedMedium)                 annotation (
       Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=180,
         origin={22,-70})));
   MVEMLib.Basic.Restrictions.HeatExchangePipe exhaustTemperatureDrop(
-      redeclare package externalMedium = fuelAirMedium.airMedium, redeclare
-      package flowMedium = fuelAirMedium.burnedMedium)
+      redeclare replaceable package externalMedium = fuelAirMedium.airMedium, redeclare
+      replaceable package flowMedium = fuelAirMedium.burnedMedium)
     annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=180,
@@ -105,16 +105,15 @@ class SIEngine
         rotation=90,
         origin={-22,84})));
   MVEMLib.Basic.Restrictions.SimpleHeatExchangePipe interCooler(
-                                                              redeclare package
-      Medium = fuelAirMedium.airMedium,
-    redeclare package externalMedium = fuelAirMedium.airMedium,
-    redeclare package flowMedium = fuelAirMedium.airMedium)
+      redeclare replaceable package Medium = fuelAirMedium.airMedium,
+    redeclare replaceable package externalMedium = fuelAirMedium.airMedium,
+    redeclare replaceable package flowMedium = fuelAirMedium.airMedium)
     annotation (Placement(transformation(extent={{-72,44},{-52,64}})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedSensor annotation (Placement(
         transformation(extent={{10,20},{30,40}}, rotation=0)));
   Engines.Combustion.Parts.ButterflyThrottle throttle(
                                    redeclare replaceable package Medium =
-        fuelAirMedium.airMedium, redeclare
+        fuelAirMedium.airMedium, redeclare replaceable 
       MVEMLib.Engines.Combustion.Parts.ThrottleServo throttleServo(Amin=15e-6,
         Amax=1000e-6))                                                                                      annotation (Placement(
         transformation(extent={{-46,44},{-26,64}}, rotation=0)));
@@ -137,10 +136,10 @@ class SIEngine
   Modelica.Blocks.Sources.Constant wg_control(k=0)            annotation (
       Placement(transformation(extent={{-6,-6},{6,6}},      rotation=180,
         origin={-34,-94})));
-  Engines.Combustion.Parts.Compressor compressor(redeclare package Medium =
+  Engines.Combustion.Parts.Compressor compressor(redeclare replaceable package Medium =
         fuelAirMedium.airMedium)
     annotation (Placement(transformation(extent={{-124,66},{-104,86}})));
-  Engines.Combustion.Parts.TurbineWithWasteGate turbineWithWasteGate(redeclare
+  Engines.Combustion.Parts.TurbineWithWasteGate turbineWithWasteGate(redeclare replaceable
       package Medium = fuelAirMedium.burnedMedium) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},

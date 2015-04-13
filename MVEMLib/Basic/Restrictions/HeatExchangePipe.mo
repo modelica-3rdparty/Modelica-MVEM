@@ -38,8 +38,8 @@ model HeatExchangePipe
     "Use mass flow in calculation of reynolds number";
 
   // Gas properties
-  Medium.BaseProperties gas_hot(T(start=300), p(start=1e5));
-  Medium.BaseProperties gas_out(T(start=300), p(start=1e5));
+  flowMedium.BaseProperties gas_hot(T(start=300), p(start=1e5));
+  flowMedium.BaseProperties gas_out(T(start=300), p(start=1e5));
 
 protected
   SI.SpecificHeatCapacityAtConstantPressure c_p;
@@ -98,7 +98,7 @@ equation
   gas_out.p = gas_hot.p;
   gas_out.T = T_out;
 
-  c_p =Medium.specificHeatCapacityCp(gas_hot.state);
+  c_p =flowMedium.specificHeatCapacityCp(gas_hot.state);
 
   // Temperature calculations
   Re_num = 4/Modelica.Constants.pi/D/mu* (if dmInReynolds then InPut.dm/n_pipes else 1/n_pipes);

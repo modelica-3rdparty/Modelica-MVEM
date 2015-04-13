@@ -27,8 +27,8 @@ model SimpleHeatExchangePipe
   parameter Real epsilon=0.81 "Intercooler efficiency";
 
   // Gas properties
-  Medium.BaseProperties gas_hot(T(start=300), p(start=1e5));
-  Medium.BaseProperties gas_out(T(start=300), p(start=1e5));
+  flowMedium.BaseProperties gas_hot(T(start=300), p(start=1e5));
+  flowMedium.BaseProperties gas_out(T(start=300), p(start=1e5));
 
 protected
   SI.Temperature T_out;
