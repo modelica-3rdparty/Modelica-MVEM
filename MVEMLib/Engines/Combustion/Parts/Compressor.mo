@@ -30,11 +30,11 @@ model Compressor "Model of compressor"
   parameter Real Phi_max =                                      0.12
     "Maximum Psi";
   parameter SI.Efficiency eta_max =                             0.8
-    "Maximum efficency";
+    "Maximum efficiency";
   parameter Real Phi_at_eta_max =                               0.06
-    "Phi at maximum efficency";
+    "Phi at maximum efficiency";
   parameter SI.Efficiency eta_min =                             0.3
-    "Minimum efficency";
+    "Minimum efficiency";
 
   // Medium to keep track of temperature increase/drop
   // Medium.BaseProperties gas_out(T(start=300),p(start=1e5));
