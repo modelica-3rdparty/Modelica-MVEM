@@ -36,7 +36,7 @@ protected
   SI.Mass m(start = pStart * VStart / 300 / TStart) "Mass of system";
   SI.Volume V(start = VStart) "Volume of system";
   // This state is not really needed but is used until der(gas.X) is rewritten
-  // as a function of Input.X ect. For now mx=gas.X*m and der(mx) is used
+  // as a function of Input.X etc. For now mx=gas.X*m and der(mx) is used
   SI.Mass mXi[Medium.nXi] "Mass of respective independent gas component";
   SI.InternalEnergy U;
 equation

@@ -26,17 +26,17 @@ model TurbineWithWasteGate "Turbine with Wastegate"
   parameter Real WG_Cd(final quantity="DischargeCoefficient", final unit="1") = 0.9
     "Discharge coefficient (Flow efficiency)";
   parameter Real k1 =                                               0.0170
-    "Turbine mass flow fit paramter";
+    "Turbine mass flow fit parameter";
   parameter Real k2 =                                               1.4
-    "Turbine mass flow fit paramter";
+    "Turbine mass flow fit parameter";
   parameter SI.Length D =                                           0.05
     "Trubine diameter";
   parameter SI.Efficiency eta_max =                                 0.75
-    "Maximum efficency";
+    "Maximum efficiency";
   parameter Real eta_max_BSR =                                      0.7
     "Maximum efficiency blade speed ratio";
   parameter SI.Efficiency eta_min =                                 0.3
-    "Minimum efficency";
+    "Minimum efficiency";
 
   FixedTurbine fixedTurbine(
     redeclare replaceable package Medium = Medium,
