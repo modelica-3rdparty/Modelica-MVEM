@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Basic.Restrictions.Partial;
-partial class NaturalFlowRestriction
+partial model NaturalFlowRestriction
   "Partial model for restrictions for which the flow always is from high pressure to low pressure"
   extends MVEMLib.Basic.Restrictions.Partial.IdealRestriction;
 equation

@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Engines.Combustion.Parts;
-class SpeedDensityEngineFlow
+model SpeedDensityEngineFlow
   "Models for flow of air or air/fuel mixture through engine"
   extends MVEMLib.Basic.Restrictions.Partial.IdealRestriction;
   parameter SI.Volume Vd =   0.5575e-3 "Engine displacement";

@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Engines.Combustion;
-class SIEngine
+model SIEngine
   "A simple SI engine with intake and exhaust manifold as well as throttle."
   extends Parts.Partial.PartialEngine(engineInertia(phi(fixed=false), w(fixed=
             false, start=1000/60*2*3.1415)));

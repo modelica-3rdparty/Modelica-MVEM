@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Engines.Combustion.Parts.Partial;
-partial class PartialEngine
+partial model PartialEngine
   "Partial engine model defining the interfaces of any engine in the library"
   parameter SI.MomentOfInertia J = 0.1 "Moment of inertia for the engine";
   Modelica.Mechanics.Rotational.Components.Inertia engineInertia(

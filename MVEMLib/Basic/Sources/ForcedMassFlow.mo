@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Basic.Sources;
-class ForcedMassFlow
+model ForcedMassFlow
   extends MVEMLib.Basic.Restrictions.Partial.IdealRestriction;
   Modelica.Blocks.Interfaces.RealInput dm "Mass flow rate in kg/s"
     annotation (Placement(transformation(

@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Engines.Combustion;
-class SimpleEngine
+model SimpleEngine
   "An extremely simple engine which converts throttle position to applied torque."
   extends Parts.Partial.PartialEngine(engineInertia(w(fixed=true, start=1000/60
             *2*3.1415)));

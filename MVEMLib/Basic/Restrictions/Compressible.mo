@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Basic.Restrictions;
-class Compressible "Model for compressible restriction"
+model Compressible "Model for compressible restriction"
   extends MVEMLib.Basic.Restrictions.Partial.NaturalFlowRestriction;
   parameter Real linearizationLim = 0.97
     "Limit for when a linear approximation is used to avoid making the system stiff. Set to 1 to disable";
