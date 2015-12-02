@@ -25,5 +25,6 @@ package MVEMLib
   import MC = Modelica.Constants;
 
 
-annotation (uses(Modelica(version="3.2.1")));
+annotation (version="1.0.1",
+  versionDate="2015-12-02",uses(Modelica(version="3.2.1")));
 end MVEMLib;
