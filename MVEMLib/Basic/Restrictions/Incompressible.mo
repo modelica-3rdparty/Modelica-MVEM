@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Basic.Restrictions;
-class Incompressible "Model of incompressible restrictions such as air filter"
+model Incompressible "Model of incompressible restrictions such as air filter"
   extends MVEMLib.Basic.Restrictions.Partial.NaturalFlowRestriction;
   parameter Real H =           1e7 "Flow resitance";
   parameter SI.Pressure pLin = 100 "Linearization limit";

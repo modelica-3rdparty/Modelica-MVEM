@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Basic.Restrictions.Partial;
-partial class NonIdealRestriction "Partial model for all restrictions."
+partial model NonIdealRestriction "Partial model for all restrictions."
    extends MVEMLib.Basic.Restrictions.Partial.TwoPort;
    // Gas properties
   Medium.BaseProperties gas(T(start=300),p(start=1e5));

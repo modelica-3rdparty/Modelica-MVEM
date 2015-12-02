@@ -20,7 +20,7 @@
 // Primary author: Per Öberg <per.oberg@liu.se>
 
 within MVEMLib.Basic.Volumes;
-class FixedVolume "Fixed Volume, i.e. that cannot change size "
+model FixedVolume "Fixed Volume, i.e. that cannot change size "
   extends Basic.Restrictions.Partial.TwoPort;
   parameter SI.AbsolutePressure pStart = 101300
     "Initial Pressure of open system";
