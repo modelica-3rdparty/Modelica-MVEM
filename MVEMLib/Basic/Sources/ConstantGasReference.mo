@@ -24,7 +24,7 @@ model ConstantGasReference "Models infinite gas source"
   // Define medium properties
   replaceable package Medium =
       Modelica.Media.Interfaces.PartialMedium annotation (choicesAllMatching=true);
-  Medium.BaseProperties gas(T(start=T,fixed=true),p(start=p,fixed=true),X(start=X,each fixed=true));
+  Medium.BaseProperties gas;
   parameter SI.AbsolutePressure p = 101300 "Pressure of source";
   parameter SI.Temperature T = 298 "Temperature of the source";
   parameter SI.MassFraction X[Medium.nX] = Medium.reference_X

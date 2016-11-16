@@ -32,9 +32,9 @@ model SIEngine
         extent={{-10,-10},{10,10}},
         rotation=270)));
   Basic.Volumes.FixedVolume intakeManifold(redeclare replaceable package Medium
-      = fuelAirMedium.airMedium, VStart=0.0018) annotation (Placement(
+      = fuelAirMedium.airMedium, VStart=0.0018, pStart = 101300 * 0.90) annotation (Placement(
         transformation(extent={{14,44},{34,64}}, rotation=0)));
-  Basic.Volumes.FixedVolume exhaustManifold(VStart=0.0025, redeclare
+  Basic.Volumes.FixedVolume exhaustManifold(VStart=0.0025, pStart = 101300 * 1.10, redeclare
       replaceable package Medium = fuelAirMedium.burnedMedium) annotation (
       Placement(transformation(
         origin={-40,-70},
@@ -117,16 +117,16 @@ model SIEngine
         Amax=1000e-6))                                                                                      annotation (Placement(
         transformation(extent={{-46,44},{-26,64}}, rotation=0)));
   Basic.Volumes.FixedVolume compressorCV(redeclare replaceable package Medium
-      = fuelAirMedium.airMedium, VStart=3e-3)   annotation (Placement(
+      = fuelAirMedium.airMedium, VStart=3e-3, pStart = 101300 * 0.95)   annotation (Placement(
         transformation(extent={{-98,66},{-76,86}},
                                                  rotation=0)));
   Basic.Volumes.FixedVolume turbineCV(redeclare replaceable package Medium =
-        fuelAirMedium.burnedMedium, VStart=3e-3)               annotation (
+        fuelAirMedium.burnedMedium, VStart=3e-3, pStart = 101300 * 1.05)               annotation (
       Placement(transformation(
         origin={-90,-70},
         extent={{-10,-10},{10,10}},
         rotation=180)));
-  Engines.Combustion.Parts.TurboShaft turboShaft1(cFUpper=0.2e-6)
+  Engines.Combustion.Parts.TurboShaft turboShaft1(cFUpper=0.2e-6, wStart = 5)
                                                   annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
